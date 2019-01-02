@@ -1,0 +1,221 @@
+/*********
+* 页面样式
+*********/
+
+/* =======
+    基本样式
+    =======*/
+
+html {
+    font-size: 62.5%;
+    color: #222;
+}
+
+::selection {
+    background-color: #b3d4fc;
+    text-shadow: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    /* 去掉小圆点 */
+    list-style: none;
+}
+
+/********
+工具样式
+********/
+.center-block {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.pull-right {
+    float: left !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+.show {
+    display: block !important;
+}
+
+.invisible {
+    /* 元素占位仍然存在 */
+    visibility: hidden;
+}
+
+.text-hide {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content:"";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*  ==============
+    浏览器更新提示
+    ==============  */
+.browerupgrage {
+    margin: 0;
+    padding: 1rem;
+    background: #ccc;
+}
+/*  ==============
+    自定义页面样式
+    ==============  */
+
+body {
+    font-size: 1.2rem;
+    font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+    line-height: 1.5;
+    background-color: #f7f7f7;
+}
+
+a{
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover,a:active {
+    color: #0ae;
+    text-decoration: underline;
+}
+
+/* 网站头部 */
+
+.container {
+    width: 100%;
+}
+
+header .top {
+    line-height: 3rem;
+    padding: 0 1.5rem;
+    color: #fff;
+    background: #555;
+    border-bottom: 1px #ecc000 solid;
+}
+
+header .top .tel {
+    float: left;
+}
+
+header .top ul li {
+    float: right;
+}
+
+header .top ul li {
+    display: inline-block;
+}
+
+header .top ul li +li {
+    border-left: 1px solid #999;
+    margin-left: -3px;
+}
+
+header .top ul li a {
+    display: inline-block;
+    padding: 0 1.5rem;
+    color: #fff;
+}
+/* 媒体查询设置 */
+
+
+header .main .brand {
+    float: left;
+    padding: 1rem 1.5rem;
+}
+
+
+header .main ul {
+    text-align: right;
+}
+
+header .main ul li {
+    display:inline-block;
+    border-left: 1px solid #f0ede9;
+}
+
+header .main ul li a {
+    display: inline-block;
+    padding: 0 2.5rem;
+    line-height: 5.5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #7c7a65;
+    text-decoration: none;
+}
+
+/* 底部导航 */
+.footer {
+    padding: 3rem 0;
+    background: #fff;
+    border-top: 2px solid #eee;
+}
+
+.footer-content {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.footer-content .brand {
+    float: left;
+    display: block;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    width: 20%;
+    height: 35px;
+    background: url('../img/logo@1x.png') no-repeat left;
+    background-size: 150px 35px;
+}
+
+.footer-content ul {
+    float: left;
+    width: 15%;
+    text-align: center;
+}
+
+.footer-content ul li {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+}
+
+.footer-content ul li .title {
+    font-size: 1.4rem;
+    line-height: 3rem;
+}
+
+
