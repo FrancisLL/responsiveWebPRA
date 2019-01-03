@@ -151,7 +151,24 @@ header .top ul li a {
     padding: 0 1.5rem;
     color: #fff;
 }
+
 /* 媒体查询设置 */
+@media only screen and (max-width: 800px) {
+    header .top {
+        background-color: green;
+    }
+}
+@media only screen and (max-width: 481px) and (max-width: 800px) {
+    header .top ul li a {
+        color: red;
+    }
+}
+@media only screen and (max-width: 480px) {
+    header .top ul li a {
+        color:blue;
+    }
+}
+
 
 
 header .main .brand {
@@ -177,6 +194,60 @@ header .main ul li a {
     font-weight: bold;
     color: #7c7a65;
     text-decoration: none;
+}
+
+
+
+/* 网站主要内容 */
+.container {
+    width: 100%;
+}
+
+/* 交易信息 */
+.transaction {
+    width: 100%;
+    background-color: #7c7365;
+    overflow: hidden;
+}
+
+.trans-content {
+    max-width: 90%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+
+.trans-data {
+    float: left;
+    padding: 1rem;
+    text-align: left;
+}
+
+.trans-data span {
+    display: inline-block;
+    line-height: 3rem;
+    color: #fff;
+}
+
+.trans-data span.trans-money {
+    font-size: 2.2rem;
+    color: #ff9900;
+    letter-spacing: 3px;
+    margin: 0 1rem;
+    padding: 0 1rem;
+    border-radius: 3px;
+    background-color: rgba(255,255,255,.9);
+    box-shadow: 1px 2px 1px #333 inset;
+}
+
+.trans-report {
+    text-align: right;
+}
+
+.trans-report a {
+    display: inline-block;
+    padding: 1rem;
+    line-height: 3rem;
+    color: #fff;
 }
 
 /* 底部导航 */
@@ -218,4 +289,76 @@ header .main ul li a {
     line-height: 3rem;
 }
 
+/* 网站底部 */
+footer {
+    width: 100%;
+    padding: 3rem 0 5rem;
+    background-color: #ededed;
+}
 
+footer ul {
+    text-align: center;
+}
+
+footer ul li {
+    display: inline-block;
+}
+
+footer ul li .icon {
+    display: inline-block;
+    text-indent: -999rem;
+    margin-right: 1.5rem;
+    background: url(http://i.alipayobjects.com/e/201307/jebmKcbrh.png) no-repeat;
+    background-size: 466px 447px;
+    overflow:hidden;
+}
+
+footer ul li .icon-zfywxk {
+    width: 38px;
+    height: 27px;
+    background-position: -369px -45px;
+}
+
+footer ul li .icon-pcirk {
+    width: 78px;
+    height: 27px;
+    background-position: -110px -96px;
+}
+footer ul li .icon-visayz {
+    width: 36px;
+    height: 27px;
+    background-position: -426px -90px;
+}
+
+footer ul li .icon-vsjmfw {
+    width: 63px;
+    height: 27px;
+    margin-right: 13px;
+    background-position: -401px -186px;
+}
+
+footer ul li .icon-wlgs {
+    width: 22px;
+    height: 27px;
+    background-position: -48px -48px;
+}
+
+footer ul li .icon-rzcx {
+    width: 75px;
+    height: 27px;
+    background-position: 0px -320px;
+}
+
+footer ul li .icon-gs {
+    width: 30px;
+    height: 30px;
+    margin-right: 0;
+    background: url(../img/cert2.png) no-repeat;
+    background-size: 30px;
+}
+
+footer p {
+    text-align: center;
+    /* font-size: .5rem; */
+    color: #999;
+}
