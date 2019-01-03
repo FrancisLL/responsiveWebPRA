@@ -39,7 +39,7 @@ li {
     float: right !important;
 }
 
-.pull-right {
+.pull-left {
     float: left !important;
 }
 
@@ -133,7 +133,7 @@ header .top .tel {
     float: left;
 }
 
-header .top ul li {
+header .top ul  {
     float: right;
 }
 
