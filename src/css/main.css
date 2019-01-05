@@ -153,19 +153,23 @@ header .top ul li a {
 }
 
 /* 媒体查询设置 */
-@media only screen and (max-width: 800px) {
-    header .top {
-        background-color: green;
+/* 媒体查询级别比较高，设置的font-size不是html的设置，而是浏览器自身的设置，需要调试。
+因为媒体查询的根元素都是浏览器自身设置的font-size,所以这里使用 em 单位，比rem单位能够有
+更好的兼容性*/
+
+@media only screen and (max-width: 50em) {
+    header .top ul li a {
+        padding: 0 1rem;
     }
 }
-@media only screen and (max-width: 481px) and (max-width: 800px) {
-    header .top ul li a {
-        color: red;
-    }
+@media only screen and (max-width:30.0625em) and (max-width: 50em) {
+
 }
-@media only screen and (max-width: 480px) {
-    header .top ul li a {
-        color:blue;
+@media only screen and (max-width: 30em) {
+    header .top .tel,
+    header .top ul li:nth-child(3),
+    header .top ul li:nth-child(4) {
+        display: none;
     }
 }
 
@@ -183,7 +187,7 @@ header .main ul {
 
 header .main ul li {
     display:inline-block;
-    border-left: 1px solid #f0ede9;
+    border-left: 1px solid #dad9d9;
 }
 
 header .main ul li a {
@@ -196,6 +200,33 @@ header .main ul li a {
     text-decoration: none;
 }
 
+@media only screen and (max-width: 50em) {
+    header .main .brand {
+        float: none;
+        display: block;
+        text-align: center;
+    }
+
+    header .main ul {
+        text-align: center;
+    }
+
+    header .main ul li {
+        border: none;
+    }
+
+    header .main ul li a {
+        font-weight: normal;
+        padding: 0 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 30em) {
+    header .main ul li:first-child {
+        display: none;
+        padding: 0 .5rem;
+    }
+}
 
 
 /* 网站主要内容 */
@@ -249,6 +280,240 @@ header .main ul li a {
     line-height: 3rem;
     color: #fff;
 }
+
+@media only screen and (max-width: 50em) {
+    .trans-data {
+        padding: 0 .5rem;
+    }
+    .trans-data span {
+        font-size: 1.2rem;
+    }
+    .trans-data span.trans-money {
+        font-size: 1.6rem;
+
+        margin: 0;
+        padding: 0;
+        letter-spacing: inherit;
+        box-shadow: none;
+        background: transparent;
+
+    }
+    .trans-report a {
+        display: inline-block;
+        padding:  0 .3rem;
+        line-height: 3rem;
+        color: #fff;
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 30em) {
+    .trans-data {
+        float: none;
+        text-align: center;
+    }
+    .trans-data span.trans-money {
+        font-size: 1.5rem;
+        color: #ff9900;
+        letter-spacing: 0;
+        background-color:transparent;
+        box-shadow: none;
+    }
+    .trans-report {
+        text-align: center;
+        font-size: 1.6rem;
+    }
+
+}
+/* 轮播广告 */
+
+/* 特点 */
+.feature {
+    width: 90%;
+    margin: 2rem auto;
+    font-size: 0;
+}
+.feature .item {
+    display:inline-block;
+    width: calc(33.3333333333% - 3rem);
+    padding: 1rem;
+    font-size: 1.4rem;
+    background-color: #fff;
+    box-shadow: 0 0 4px #ccc;
+
+}
+.feature .item + .item {
+    margin-left: 1.5rem;
+}
+.feature .item h3 {
+    display: inline-block;
+    width: 40%;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    font-size: 3.3rem;
+    text-align: center;
+    color: #ff9900;
+}
+.feature .item p {
+    display: inline-block;
+    color: #999;
+    /* font-size: 1.8rem; */
+    width: 50%;
+    margin: 0;
+    padding: 0;
+}
+/* 最新公告 */
+.notice {
+    width: 90%;
+    margin: 2rem auto;
+    box-shadow: 0 0 4px #ccc;
+    /* padding: .5rem .6rem; */
+    line-height: 3rem;
+    background: #fff;
+    font-size: 1.4rem;
+}
+.notice a {
+    float: left;
+    display: inline-block;
+    width: 70%;
+    margin-left: 2rem;
+    text-decoration: none;
+}
+.notice a:first-child {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.notice a:first-child:before {
+    content:'最新公告：\00a0\00a0';
+    color: #aaa;
+}
+.notice a span {
+    color: #999;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+.notice a.more {
+    width: auto;
+    float: right;
+    margin-right: 2rem;
+    color: #ff9900;
+}
+/* 产品 */
+.product {
+    width: 90%;
+    margin: 2rem auto;
+    font-size: 1.4rem;
+    background-color: #f5f9fa;
+    border-top: 2px solid #ff9900;
+    box-shadow: 0 0 4px #ccc;
+}
+.product .item + .item {
+    border-top: 1px solid #eee;
+}
+.product h2 {
+    float: left;
+    width: 20%;
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: normal;
+    color: #635c51;
+}
+.product h2 em {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    font-style: normal;
+}
+.product h2 em:first-child {
+    margin-top: 4rem;
+}
+.product .product-content {
+    float: left;
+    width: 79.5%;
+    border-left: 1px solid #eee;
+    background-color: #fff;
+}
+.product .product-content .item {
+    width: 100%;
+}
+.product .product-content .item h3 {
+    float: left;
+    width: 30%;
+    margin: 1.5rem 0;
+    font-size: 1.4rem;
+    font-weight: normal;
+    text-align: center;
+}
+.product .product-content .item h3 em {
+    /* display: inline-block; */
+    font-size: 3.6rem;
+    font-style: normal;
+    color: #999;
+    margin-right: .5rem;
+}
+.product .product-content .item h3 i{
+    display: block;
+    font-size: 1.2rem;
+    font-style: normal;
+    color: #999;
+}
+
+.product .product-content .item .info {
+    float: left;
+    width: 48%;
+    padding: 1rem;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    font-size: 14px;
+}
+.product .product-content .item .info +.info {
+    border-top: 1px solid #eee;
+}
+.product .product-content .item .info p {
+    float: left;
+    display: inline-block;
+    text-align: center;
+    width: 56%;
+}
+
+.product .product-content .item .info p:last-child {
+    width: 40%;
+}
+
+.product .product-content .item .info p span {
+    display: block;
+    font-size: 2.4rem;
+    color: #ff9900;
+}
+
+.product .product-content .item .info p span i {
+    font-size: 1.2rem;
+    font-style: normal;
+    color: #999;
+}
+
+.product .product-content .item .buy {
+    float: left;
+    width: calc(22% - 4.4rem);
+    padding: 1rem;
+}
+
+.product .product-content .item .buy a {
+    display: block;
+    width: 90%;
+    margin: 1.5rem auto;
+    max-width: 12rem;
+    line-height: 4rem;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff9900;
+    border-radius: 5px;
+}
+
 
 /* 底部导航 */
 .footer {
