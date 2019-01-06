@@ -363,6 +363,53 @@ header .main ul li a {
     margin: 0;
     padding: 0;
 }
+@media only screen and (max-width: 50em) {
+    .feature .item h3{
+        display: block;
+        width: 100%;
+    }
+    .feature .item p {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 30em) {
+    .feature {
+        width: 98%;
+    }
+    .feature .item {
+        display: block;
+        width: auto;
+        margin: 1rem 0;
+
+    }
+    .feature .item + .item {
+        margin-left: 0;
+    }
+    .feature .item h3 {
+        display: inline-block;
+        width: 50%;
+        margin: 0;
+        padding: 0;
+        vertical-align: top;
+        font-size: 3.3rem;
+        text-align: center;
+        color: #ff9900;
+    }
+    .feature .item p {
+        display: inline-block;
+        color: #999;
+        text-align: left;
+        width: 40%;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+
 /* 最新公告 */
 .notice {
     width: 90%;
@@ -399,6 +446,15 @@ header .main ul li a {
     float: right;
     margin-right: 2rem;
     color: #ff9900;
+}
+
+@media only screen and (max-width: 30rem){
+    .notice {
+        width: 98%;
+    }
+    .notice span {
+        display: none;
+    }
 }
 /* 产品 */
 .product {
@@ -553,7 +609,14 @@ header .main ul li a {
     font-size: 1.4rem;
     line-height: 3rem;
 }
-
+@media only screen and (max-width: 50rem){
+    .footer .footer-content .brand {
+        display: none;
+    }
+    .footer ul {
+        width: 20%
+    }
+}
 /* 网站底部 */
 footer {
     width: 100%;
